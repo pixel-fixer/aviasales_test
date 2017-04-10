@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовое задание Aviasales</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="root">
+    <div class="tickets">
+      <div class="logo">
+        <img src="img/Logo.png" alt="">
+      </div>
+      <div class="tickets__filter">
+        <div class="tickets__filter__header">
+          Количество пересадок
+        </div>
+        <div class='tickets__filter__stops'>
+          <div>
+            <label for="stops_all">
+              <input id='stops_all' type="checkbox" name="" value=""><div class="label"></div>
+              Все
+              <a href="" class='tickets__filter__only'>только</a>
+            </label>
+          </div>
+          <div>
+            <label for="stop_none">
+              <input id='stop_none' type="checkbox" name="" value=""><div class="label"></div>
+              Без пересадок
+              <a href="" class='tickets__filter__only'>только</a>
+            </label>
+          </div>
+          <div>
+            <label for="stops_1">
+              <input id='stops_1' type="checkbox" name="" value=""><div class="label"></div>
+              1 пересадка
+              <a href="" class='tickets__filter__only'>только</a>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="tickets__list">
+        <div class="tickets__list__item">
+          <div class="row">
+            <div class="tickets__list__item__left col-sm-12 col-md-4">
+              <img src="img/fly_logo.png" alt="">
+              <a href="" class="btn">Купить<br> за 12000 Р</a>
+            </div>
+            <div class="tickets__list__item__right col-xs-12 col-md-8">
+              <div class="tickets__list__item__time">
+                <span class="fly_time fly_start">09:25</span>
+                <div class="fly_bar">1 пересадка</div>
+                <span class='fly_time fly_end'>12:56</span>
+              </div>
+              <div class="cf"></div>
+              <div class="tickets__list__item__citydate left">
+                <div class="fly_city">ASD</div>
+                <div class="fly_date">9 окт 2016</div>
+              </div>
+              <div class="tickets__list__item__citydate right">
+                <div class="fly_city">ASD</div>
+                <div class="fly_date">25 февраля</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style='clear: both'></div>
+    </div>
+  </div>
+</body>
+</html>
