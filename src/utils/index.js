@@ -7,13 +7,22 @@ var utils = {
         return five;
     }
     number %= 10;
-    if (number == 1) {
+    if (number === 1) {
         return one;
     }
     if (number >= 2 && number <= 4) {
         return two;
     }
     return five;
+  },
+  ru_date: function (date) {
+
+    var date = date.split('.').reverse();
+    return new Date(date[0], date[1]-1, date[2], 12,0,0 ).toLocaleString('ru', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
   }
 }
 

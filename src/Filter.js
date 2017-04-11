@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Filter extends Component {
+
   render() {
     return (
       <div className="tickets__filter">
@@ -8,27 +9,25 @@ class Filter extends Component {
           Количество пересадок
         </div>
         <div className='tickets__filter__stops'>
-          <div>
-            <label htmlFor="stops_all">
-              <input id='stops_all' type="checkbox" name="" value=""/><div className="label"></div>
-              Все
-              <a href="" className='tickets__filter__only'>только</a>
-            </label>
-          </div>
-          <div>
-            <label htmlFor="stop_none">
-              <input id='stop_none' type="checkbox" name="" value=""/><div className="label"></div>
-              Без пересадок
-              <a href="" className='tickets__filter__only'>только</a>
-            </label>
-          </div>
-          <div>
-            <label htmlFor="stops_1">
-              <input id='stops_1' type="checkbox" name="" value=""/><div className="label"></div>
-              1 пересадка
-              <a href="" className='tickets__filter__only'>только</a>
-            </label>
-          </div>
+          {this.props.filters.map( (filter, index) =>
+            <div key={ filter.number}>
+              <label htmlFor={"stop_" + filter.number}>
+                <input
+                  onChange={() => this.props.setFilter(filter.number)}
+                  id={"stop_" + filter.number}
+                  type="checkbox"
+                  name=""
+                  value={filter.number}
+                  checked={filter.active}
+                  />
+                <div className="label"></div>
+                {filter.label}
+                {filter.number !== 'all' && 
+                  <a href="javascript:void(0);" onClick={(e) =>  this.props.setFilter(filter.number, true)} className='tickets__filter__only'>только</a>
+                }
+              </label>
+            </div>
+          )}
         </div>
       </div>
     );
