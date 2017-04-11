@@ -39,6 +39,21 @@ class App extends Component {
       ticketStops: []
     }
   }
+
+  /* #TAKS5
+  componentDidMount() {
+    this.TicketList();
+  }
+
+  TicketList() {
+    fetch('https://localhost:3000/api/').then(function(res){
+          let new_state = this.state;
+          new_state.tickets = res;
+          this.setState(new_state);
+    });
+  }
+  */
+
   setFilter = (filterVal, isOnly) => {
 
     let new_state = this.state;
