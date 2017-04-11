@@ -60,7 +60,7 @@ class App extends Component {
         new_state.ticketStops.push(v.number);
     });
 
-    if(filterVal !== 'all'){
+    if(filterVal !== 'all' && new_state.ticketStops.length > 0){
       let sorted_tickets = [];
       _.each(tickets, (v) => {
         if(new_state.ticketStops.includes(v.stops))

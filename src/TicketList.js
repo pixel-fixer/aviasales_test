@@ -7,11 +7,11 @@ class Ticket extends Component {
     return (
       <div className="tickets__list__item">
         <div className="row">
-          <div className="tickets__list__item__left col-sm-12 col-md-4">
+          <div className="tickets__list__item__left">
             <img src={TicketLogo} alt=""/>
             <a href="" className="btn">Купить<br/> за {ticket.price} Р</a>
           </div>
-          <div className="tickets__list__item__right col-xs-12 col-md-8">
+          <div className="tickets__list__item__right">
             <div className="tickets__list__item__time">
               <span className="fly_time fly_start">{ticket.departure_time}</span>
               <div className="fly_bar">

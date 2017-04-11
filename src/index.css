@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   background: #f3f7fa;
   font-size: 12px;
+  min-width: 320px;
 }
 
 .cf:before,
@@ -46,8 +47,9 @@ body {
   padding: 45px 0 60px
 }
 .tickets{
-  max-width: 850px;
+  max-width: 865px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .tickets__filter{
   max-width: 230px;
@@ -58,6 +60,7 @@ body {
   margin-right: 20px;
   float: left;
   width: 230px;
+  margin-bottom: 20px;
 }
 .tickets__filter__header{
   color: #4A4A4A;
@@ -196,4 +199,49 @@ body {
 }
 .tickets__list__item__citydate.right > div{
   text-align: right;
+}
+.tickets__list__item__left{
+  width: 33.33333%;
+}
+.tickets__list__item__right{
+  width: 66.666666%;
+}
+
+/* MEDIA */
+@media screen and (max-width: 1024px){
+  .tickets__filter{
+    width: 33.33333%;
+  }
+}
+@media screen and (max-width: 870px){
+  .tickets__filter{
+    width: 100%;
+    max-width: none;
+  }
+  .tickets__filter__stops div{
+    display: inline-block;
+  }
+  .tickets__list{
+    width: 100%;
+  }
+  .tickets__filter__only{
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 560px){
+  .tickets__list__item__left,
+  .tickets__list__item__right{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 380px){
+  .fly_bar{
+    width: 70px;
+  }
+  .fly_bar:after{
+    right: -9px;
+  }
+
 }
